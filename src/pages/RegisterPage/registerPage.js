@@ -1,16 +1,15 @@
 import styled from "styled-components";
 
-export const Login = styled.div`
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 25px;
+export const Register = styled.div`
+        /* width: 100vw;
+        height: 100vh; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 31px;
 
-    div {
-        height: 70%;
+        div {
         width:  60%;
         max-width: 369px;
         border-radius: 4px;
@@ -22,6 +21,32 @@ export const Login = styled.div`
         flex-direction: column;
     }
 
+    .divLogo {
+        display: flex;
+        width: 60%;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        background: none;
+    }
+
+    a {
+        font-family: 'Inter', sans-serif;
+        border-radius: 4px;
+        background: #212529;
+        text-align: center;
+        padding: 5px; 
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 28px;
+        color: #F8F9FA;
+        height: 40px;
+        width: 67px;
+        border-radius: 4px;
+        padding: 7px 16px 0px 16px;
+    }
+
     h2 {
         font-family: 'Inter', sans-serif;
         font-size: 18px;
@@ -30,6 +55,15 @@ export const Login = styled.div`
         letter-spacing: 0em;
         text-align: left;
         color: #F8F9FA;
+    }
+
+    span {
+        font-family: 'Inter', sans-serif;
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 18px;
+        color: #868E96;
+        margin-top: 5px;
     }
 
     form {
@@ -59,7 +93,17 @@ export const Login = styled.div`
         border-radius: 4px;
         color: #F8F9FA;
     }
-    
+
+    select {
+        font-family: 'Inter', sans-serif;
+        width: 100%;
+        height: 40px;
+        background: #343B41;
+        border: 1.2px solid #F8F9FA;
+        border-radius: 4px;
+        color: #F8F9FA;
+    }
+
     button {
         font-family: 'Inter', sans-serif;
         width: 100%;
@@ -72,29 +116,5 @@ export const Login = styled.div`
         margin-top: 5px;
         color: #FFFFFF;
     }
-
-    span {
-        font-family: 'Inter', sans-serif;
-        font-size: 12px;
-        font-weight: 600;
-        line-height: 18px;
-        color: #868E96;
-        margin-top: 5px;
-    }
-
-    a {
-        font-family: 'Inter', sans-serif;
-        width: 85%;
-        height: 40px;
-        border-radius: 4px;
-        background: #868E96;
-        text-align: center;
-        margin-top: 21px;
-        padding: 5px; 
-        font-size: 16px;
-        font-weight: 500;
-        line-height: 26px;
-        color: #F8F9FA;
-
-    }
+    
 `

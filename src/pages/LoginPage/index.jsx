@@ -1,5 +1,5 @@
 import { Login } from "./loginPage";
-import logo from "../../img/Logo.svg"
+import logo from "../../img/Logo.svg";
 
 export const LoginPage = () => {
   return (
@@ -15,7 +15,7 @@ export const LoginPage = () => {
           <button>Entrar</button>
         </form>
         <span>Ainda não possui uma conta?</span>
-        <a href="">Cadastre-se</a>
+        <a href="../RegisterPage/index">Cadastre-se</a>
       </div>
     </Login>
   );
