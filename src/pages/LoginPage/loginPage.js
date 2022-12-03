@@ -58,6 +58,7 @@ export const Login = styled.div`
         border: 1.2px solid #F8F9FA;
         border-radius: 4px;
         color: #F8F9FA;
+        padding: 0px 10px 0px 15px;
     }
     
     button {

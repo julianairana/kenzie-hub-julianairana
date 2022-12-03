@@ -15,7 +15,7 @@ export const HomeNavBar = styled.div`
     align-items: center;
     justify-content: space-around;
 
-    button {
+    a {
         font-family: 'Inter', sans-serif;
         height: 32px;
         width: 55px;
@@ -58,94 +58,47 @@ export const HomeHeader = styled.div`
         margin-top: 5px;
         margin-right: 104px;
     }
+
+    @media (max-width: 900px) {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: baseline;
+        }
+
 `
 
-export const HomeCards = styled.div`
-        width: 100%;
+    export const HomeText = styled.div`
         display: flex;
         flex-direction: column;
+        gap: 25px;
+        margin-left: 293px;
 
-        div {
-        width: 100%;   
-        display: flex;
-        align-items: baseline;
-        justify-content: space-around;
-        }
-
-        h3 {
+        p {
         font-family: 'Inter', sans-serif;
-        font-size: 14px;
-        font-weight: 600;
-        line-height: 18px;
-        color: #F8F9FA;  
-        margin-left: 7px;
-        }
-
-        button {
-        height: 32px;
-        width: 32px;
-        background: #212529;
-        border-radius: 4px;    
-        margin-right: 7px;
-        }
-
-        .divUl {
-            display: flex;
-            justify-content: center;
-            width: 54%;
-            margin: auto;
-        }
-
-        ul {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        flex-direction: column;
-        margin-top: 30px;
-        background: #343B41;
-        border-radius: 4px;
-        padding: 12px 0px 12px 0px;
-        }
-
-        li{
-        width: 92%;
-        height: 43px ;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        border-radius: 4px;
-        background: #121214;
-        margin: auto;
-        margin-top: 8px;
-        margin-bottom: 8px;
-        }
-
-        .divSpan {
-            display: flex;
-            width: auto;
-            align-items: flex-start;
-            gap: 5px;
-        }
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 28px;
+        color: #F8F9FA;
+    }
 
         span {
         font-family: 'Inter', sans-serif;
-        font-size: 12px;
-        font-weight: 600;
-        line-height: 18px;
-        color: #868E96;
-        margin-top: 5px;
-       
-    }
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: #FFFFFF;
+        }
 
-    .buttonTrash {
-        height: 32px;
-        width: 32px;
-        border-radius: 4px;    
-        margin-right: 7px;
-        background: transparent;
-    }
+        @media (max-width: 900px) {
+            width: 100%;
+            display: flex;
+            margin: 0 auto;
+            padding: 50px;
+        }
+    `
 
  
 
-`
