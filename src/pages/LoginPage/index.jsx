@@ -4,7 +4,6 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
-
 import { loginSchema } from "./loginSchema";
 
 export const LoginPage = ({loginUser}) => {
