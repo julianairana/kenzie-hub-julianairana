@@ -8,7 +8,10 @@ export const HomePage = ({user}) => {
     <HomeContainer>
       <HomeNavBar>
         <img src={logo} alt="" />
-        <Link to={`/`}>Sair</Link>
+        <Link to={`/`} onClick={()=>{
+          user = null;
+          localStorage.removeItem("@TOKEN");
+        }}>Sair</Link>
       </HomeNavBar>
       <HomeHeader>
         <h2>Olá, {user.user.name} </h2>
