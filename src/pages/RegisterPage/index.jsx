@@ -3,32 +3,17 @@ import logo from "../../img/Logo.svg";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { registerSchema } from "./registerSchema";
-import { Link, useNavigate } from "react-router-dom";
-import { api } from "../../services/api";
+import { Link } from "react-router-dom";
 import { useState } from "react";
-import { toast, ToastContainer } from "react-toastify";
+import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { useContext } from "react";
+import { AuthContext } from "../../contexts/AuthContext";
 
 export const RegisterPage = () => {
+
+  const {registerUser} = useContext(AuthContext);
   const [loading, setLoading] = useState(false);
-
-  const navigate = useNavigate();
-
-  const registerUser = async (data) => {
-    try {
-      setLoading(true);
-      const response = await api.post("users", data);
-      toast.success("Conta criada com sucesso!");
-
-      setTimeout(() => {
-        navigate("/");
-      }, 5000);
-    } catch (error) {
-      toast.error("Ops! Algo deu errado");
-    } finally {
-      setLoading(false);
-    }
-  };
 
   const {
     register,
@@ -41,7 +26,6 @@ export const RegisterPage = () => {
   });
 
   const submit = async (data) => {
-    console.log(data);
     const dataNew = { ...data };
     delete dataNew.passwordConfirm;
     await registerUser(dataNew);

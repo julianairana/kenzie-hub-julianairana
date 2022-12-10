@@ -3,13 +3,13 @@ import logo from "../../img/Logo.svg";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { Link, useNavigate } from "react-router-dom";
-import { useState } from "react";
 import { loginSchema } from "./loginSchema";
+import { AuthContext } from "../../contexts/AuthContext";
+import { useContext } from "react";
 
-export const LoginPage = ({loginUser}) => {
+export const LoginPage = () => {
 
- 
-  const [loading, setLoading] = useState(false);
+  const {loginUser, loading} = useContext(AuthContext);
 
   const navigate = useNavigate()
 
