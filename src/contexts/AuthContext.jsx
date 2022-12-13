@@ -21,6 +21,10 @@ export const AuthProvider = ({ children }) => {
         setNewLoading(false);
         return;
     }
+
+    else if(tokenValidate){
+      navigate("/home")
+    }
     api.defaults.headers.common["Authorization"] = `Bearer ${tokenValidate}`
 
     try {
@@ -52,6 +56,7 @@ export const AuthProvider = ({ children }) => {
       setTimeout(() => {
         navigate("/home");
       }, 3000);
+
     } catch (error) {
       toast.error("Login não realizado!");
     } finally {
